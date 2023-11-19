@@ -3,6 +3,7 @@ package com.example.crud.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -44,6 +45,7 @@ public class Country {
     @OneToMany
     @JsonIgnore
     @JoinColumn(name = "coin_id")
+    @ToString.Exclude
     private List<Coin> coins;
 
     /**
@@ -55,6 +57,7 @@ public class Country {
     @OneToMany
     @JsonIgnore
     @JoinColumn(name = "mint_id")
+    @ToString.Exclude
     private List<Mint> mints;
 }
 /** See Also:

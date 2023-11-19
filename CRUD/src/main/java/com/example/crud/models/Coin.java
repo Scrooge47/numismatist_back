@@ -3,6 +3,7 @@ package com.example.crud.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.Currency;
 import java.util.List;
@@ -61,6 +62,7 @@ public class Coin {
      */
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "country_id")
+    @ToString.Exclude
     private Country country;
 
     /**
@@ -68,6 +70,7 @@ public class Coin {
      */
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "material_id")
+    @ToString.Exclude
     private Material material;
 
     /**
@@ -75,6 +78,7 @@ public class Coin {
      */
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "mint_id")
+    @ToString.Exclude
     private Mint mint;
 
     /**
@@ -86,6 +90,7 @@ public class Coin {
             name = "coin_collection",
             joinColumns = @JoinColumn(name = "coin_id"),
             inverseJoinColumns = @JoinColumn(name = "collection_id"))
+    @ToString.Exclude
     private List<Collection> collections;
 
     /**
@@ -94,6 +99,7 @@ public class Coin {
     @OneToMany(cascade = CascadeType.ALL)
     @JsonIgnore
     @JoinColumn(name = "price_id")
+    @ToString.Exclude
     private List<Price> prices;
 }
 /**

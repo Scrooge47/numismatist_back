@@ -3,6 +3,7 @@ package com.example.crud.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class Collection {
      */
     @ManyToMany(mappedBy = "collections")
     @JsonIgnore
+    @ToString.Exclude
     private List<Coin> coins;
 }
 /**
