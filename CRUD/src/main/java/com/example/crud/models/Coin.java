@@ -21,5 +21,25 @@ public class Coin {
     private Float nominal;
     private Integer circulation;
     private Currency currency;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "country_id")
+    private Country country;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "material_id")
+    private Material material;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "mint_id")
+    private Mint mint;
+    @ManyToMany
+    @JsonIgnore
+    @JoinTable(
+            name = "coin_collection",
+            joinColumns = @JoinColumn(name = "coin_id"),
+            inverseJoinColumns = @JoinColumn(name = "collection_id"))
+    private List<Collection> collections;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    @JoinColumn(name = "price_id")
+    private List<Price> prices;
 }
