@@ -95,13 +95,12 @@ public class Coin {
     @JsonIgnore
     @JoinColumn(name = "price_id")
     private List<Price> prices;
-
-    /**
-     * See Also:
-     * - {@link Country} (Country Entity): The country where the coin was minted.
-     * - {@link Material} (Material Entity): The material composition of the coin.
-     * - {@link Mint} (Mint Entity): The minting facility responsible for producing the coin.
-     * - {@link Collection} (Collection Entity): The collections that include this coin.
-     * - {@link Price} (Price Entity): The list of prices associated with this coin.
-     */
 }
+/**
+ * See Also:
+ * - {@link Country} (Country Entity): The country where the coin was minted.
+ * - {@link Material} (Material Entity): The material composition of the coin.
+ * - {@link Mint} (Mint Entity): The minting facility responsible for producing the coin.
+ * - {@link Collection} (Collection Entity): The collections that include this coin.
+ * - {@link Price} (Price Entity): The list of prices associated with this coin.
+ */
