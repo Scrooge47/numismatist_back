@@ -4,8 +4,9 @@ import com.example.crud.ex.ModelNotFoundException;
 import com.example.crud.models.Country;
 import com.example.crud.repositories.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CountryService {
@@ -13,6 +14,9 @@ public class CountryService {
     @Autowired
     public CountryService(CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
+    }
+    public List<Country> getAllCountries() {
+        return countryRepository.findAll();
     }
     public Country getCountryById(Long id) throws ModelNotFoundException {
         return countryRepository.findById(id).orElseThrow(ModelNotFoundException::new);

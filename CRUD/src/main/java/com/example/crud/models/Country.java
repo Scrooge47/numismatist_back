@@ -2,7 +2,9 @@ package com.example.crud.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 */
 @Data
 @Entity
+@NoArgsConstructor
 public class Country {
     /**
      * The unique identifier for the country.
@@ -35,6 +38,12 @@ public class Country {
      * The country code.
      */
     private String code;
+
+    public Country(Long id, String name, String code) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+    }
 
     /**
      * The list of coins associated with this country.
