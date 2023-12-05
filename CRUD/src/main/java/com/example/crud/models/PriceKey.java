@@ -11,11 +11,11 @@ import java.io.Serializable;
  * @Author Konstantin Kokoshnikov
  * @Date 19.11.2023
  * @Version 1.0
- *
  */
 @Data
 @Embeddable
 public class PriceKey implements Serializable {
+
     /**
      * The coin associated with the price.
      */
@@ -30,8 +30,7 @@ public class PriceKey implements Serializable {
     private Condition condition;
 }
 /**
- * See Also:
- * - {@link Coin} (Coin Entity): Represents a coin entity in the application.
- * - {@link Condition} (Condition Entity): Represents a condition entity in the application.
- * - {@link Price} (Price Entity): Represents a price entity in the application.
+ * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application. - {@link Condition} (Condition
+ * Entity): Represents a condition entity in the application. - {@link Price} (Price Entity): Represents a price entity
+ * in the application.
  */

@@ -13,11 +13,11 @@ import java.util.List;
  * @Author Konstantin Kokoshnikov
  * @Date 19.11.2023
  * @Version 1.0
- *
  */
 @Data
 @Entity
 public class Material {
+
     /**
      * The unique identifier for the material.
      */
@@ -34,8 +34,8 @@ public class Material {
     /**
      * The list of coins associated with this material.
      * <p>
-     * This is a one-to-many relationship, and the association is unidirectional.
-     * It is mapped by the "material" property in the Coin class.
+     * This is a one-to-many relationship, and the association is unidirectional. It is mapped by the "material"
+     * property in the Coin class.
      */
     @OneToMany
     @JsonIgnore
@@ -44,6 +44,5 @@ public class Material {
     private List<Coin> coins;
 }
 /**
- * See Also:
- * - {@link Coin} (Coin Entity): Represents a coin entity in the application.
+ * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application.
  */

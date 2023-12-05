@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import lombok.experimental.UtilityClass;
 
 /**
  * Represents a mint entity in the application. A mint is responsible for producing coins.
@@ -13,11 +14,11 @@ import java.util.List;
  * @Author Konstantin Kokoshnikov
  * @Date 19.11.2023
  * @Version 1.0
- *
  */
 @Data
 @Entity
 public class Mint {
+
     /**
      * The unique identifier for the mint.
      */
@@ -34,8 +35,8 @@ public class Mint {
     /**
      * The list of coins associated with this mint.
      * <p>
-     * This is a one-to-many relationship, and the association is unidirectional.
-     * It is mapped by the "mint" property in the Coin class.
+     * This is a one-to-many relationship, and the association is unidirectional. It is mapped by the "mint" property in
+     * the Coin class.
      */
     @OneToMany
     @JsonIgnore
@@ -52,7 +53,6 @@ public class Mint {
     private Country country;
 }
 /**
- * See Also:
- * - {@link Coin} (Coin Entity): Represents a coin entity in the application.
- * - {@link Country} (Country Entity): Represents a country entity associated with the mint.
+ * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application. - {@link Country} (Country
+ * Entity): Represents a country entity associated with the mint.
  */
