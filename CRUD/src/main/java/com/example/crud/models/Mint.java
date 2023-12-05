@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
-import lombok.experimental.UtilityClass;
 
 /**
  * Represents a mint entity in the application. A mint is responsible for producing coins.
@@ -52,7 +51,3 @@ public class Mint {
     @ToString.Exclude
     private Country country;
 }
-/**
- * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application. - {@link Country} (Country
- * Entity): Represents a country entity associated with the mint.
- */

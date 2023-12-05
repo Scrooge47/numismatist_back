@@ -82,7 +82,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.3.0</version>
                 <configuration>
                     <consoleOutput>true</consoleOutput>
                     <violationSeverity>warning</violationSeverity>
@@ -90,7 +90,7 @@
                     <failsOnError>true</failsOnError>
                     <linkXRef>false</linkXRef>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <configLocation>../config/checkstyle.xml</configLocation>
                 </configuration>
                 <executions>
                     <execution>
@@ -101,7 +101,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin
+            </plugin>
         </plugins>
     </build>
 

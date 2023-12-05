@@ -60,7 +60,3 @@ public class Country {
     @ToString.Exclude
     private List<Mint> mints;
 }
-/**
- * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application. - {@link Mint} (Mint Entity):
- * Represents a mint entity in the application.
- */

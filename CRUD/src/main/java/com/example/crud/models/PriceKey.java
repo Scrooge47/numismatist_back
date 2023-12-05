@@ -29,8 +29,3 @@ public class PriceKey implements Serializable {
     @Enumerated(EnumType.STRING)
     private Condition condition;
 }
-/**
- * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application. - {@link Condition} (Condition
- * Entity): Represents a condition entity in the application. - {@link Price} (Price Entity): Represents a price entity
- * in the application.
- */

@@ -2,6 +2,7 @@ package com.example.crud.models;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 /**
  * An enumeration representing the condition of a coin.
@@ -60,6 +61,6 @@ public enum Condition {
      */
     @Override
     public String toString() {
-        return label;
+        return this.label;
     }
 }

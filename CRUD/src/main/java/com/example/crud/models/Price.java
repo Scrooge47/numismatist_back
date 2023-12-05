@@ -26,8 +26,3 @@ public class Price {
      */
     private Integer price;
 }
-/**
- * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application. - {@link Condition} (Condition
- * Entity): Represents a condition entity in the application. - {@link PriceKey} (PriceKey Embeddable): Represents a
- * composite key for the price entity.
- */

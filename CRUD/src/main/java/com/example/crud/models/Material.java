@@ -43,6 +43,3 @@ public class Material {
     @ToString.Exclude
     private List<Coin> coins;
 }
-/**
- * See Also: - {@link Coin} (Coin Entity): Represents a coin entity in the application.
- */

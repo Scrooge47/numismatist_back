@@ -195,7 +195,6 @@
         <module name="JavadocTagContinuationIndentation">
             <property name="offset" value="0"/>
         </module>
-        <module name="JavadocParagraph"/>
         <module name="AtclauseOrder">
             <property name="tagOrder" value="@param, @return, @throws, @deprecated"/>
             <property name="target"
