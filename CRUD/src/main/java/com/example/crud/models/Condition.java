@@ -2,7 +2,6 @@ package com.example.crud.models;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.ToString;
 
 /**
  * An enumeration representing the condition of a coin.
