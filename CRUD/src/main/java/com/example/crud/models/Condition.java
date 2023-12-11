@@ -1,5 +1,8 @@
 package com.example.crud.models;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
 /**
  * An enumeration representing the condition of a coin.
  *
@@ -7,6 +10,8 @@ package com.example.crud.models;
  * @Date 19.11.2023
  * @Version 1.0
  */
+@Getter
+@RequiredArgsConstructor
 public enum Condition {
     /**
      * Good condition.
@@ -49,21 +54,12 @@ public enum Condition {
     private final String label;
 
     /**
-     * Constructor for the Condition enumeration.
-     *
-     * @param label The label associated with the condition.
-     */
-    Condition(String label) {
-        this.label = label;
-    }
-
-    /**
      * Returns the label associated with the condition.
      *
      * @return The label of the condition.
      */
     @Override
     public String toString() {
-        return label;
+        return this.label;
     }
 }

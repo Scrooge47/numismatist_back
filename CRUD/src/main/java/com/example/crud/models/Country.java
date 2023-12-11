@@ -13,11 +13,11 @@ import java.util.List;
  * @Author Konstantin Kokoshnikov
  * @Date 19.11.2023
  * @Version 1.0
- *
-*/
+ */
 @Data
 @Entity
 public class Country {
+
     /**
      * The unique identifier for the country.
      */
@@ -39,8 +39,8 @@ public class Country {
     /**
      * The list of coins associated with this country.
      * <p>
-     * This is a one-to-many relationship, and the association is unidirectional.
-     * It is mapped by the "country" property in the Coin class.
+     * This is a one-to-many relationship, and the association is unidirectional. It is mapped by the "country" property
+     * in the Coin class.
      */
     @OneToMany
     @JsonIgnore
@@ -51,8 +51,8 @@ public class Country {
     /**
      * The list of mints associated with this country.
      * <p>
-     * This is a one-to-many relationship, and the association is unidirectional.
-     * It is mapped by the "country" property in the Mint class.
+     * This is a one-to-many relationship, and the association is unidirectional. It is mapped by the "country" property
+     * in the Mint class.
      */
     @OneToMany
     @JsonIgnore
@@ -60,7 +60,3 @@ public class Country {
     @ToString.Exclude
     private List<Mint> mints;
 }
-/** See Also:
- * - {@link Coin} (Coin Entity): Represents a coin entity in the application.
- * - {@link Mint} (Mint Entity): Represents a mint entity in the application.
- */

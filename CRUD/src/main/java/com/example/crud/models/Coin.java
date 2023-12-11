@@ -18,6 +18,7 @@ import java.util.List;
 @Data
 @Entity
 public class Coin {
+
     /**
      * The unique identifier for the coin.
      */
@@ -87,9 +88,9 @@ public class Coin {
     @ManyToMany
     @JsonIgnore
     @JoinTable(
-            name = "coin_collection",
-            joinColumns = @JoinColumn(name = "coin_id"),
-            inverseJoinColumns = @JoinColumn(name = "collection_id"))
+        name = "coin_collection",
+        joinColumns = @JoinColumn(name = "coin_id"),
+        inverseJoinColumns = @JoinColumn(name = "collection_id"))
     @ToString.Exclude
     private List<Collection> collections;
 
@@ -102,11 +103,3 @@ public class Coin {
     @ToString.Exclude
     private List<Price> prices;
 }
-/**
- * See Also:
- * - {@link Country} (Country Entity): The country where the coin was minted.
- * - {@link Material} (Material Entity): The material composition of the coin.
- * - {@link Mint} (Mint Entity): The minting facility responsible for producing the coin.
- * - {@link Collection} (Collection Entity): The collections that include this coin.
- * - {@link Price} (Price Entity): The list of prices associated with this coin.
- */

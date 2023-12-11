@@ -9,11 +9,11 @@ import lombok.Data;
  * @Author Konstantin Kokoshnikov
  * @Date 19.11.2023
  * @Version 1.0
- *
  */
 @Data
 @Entity
 public class Price {
+
     /**
      * The composite key for the price entity. See {@link PriceKey}.
      */
@@ -26,9 +26,3 @@ public class Price {
      */
     private Integer price;
 }
-/**
- * See Also:
- * - {@link Coin} (Coin Entity): Represents a coin entity in the application.
- * - {@link Condition} (Condition Entity): Represents a condition entity in the application.
- * - {@link PriceKey} (PriceKey Embeddable): Represents a composite key for the price entity.
- */

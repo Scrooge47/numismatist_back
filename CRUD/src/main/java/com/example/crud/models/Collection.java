@@ -19,6 +19,7 @@ import java.util.List;
 @Data
 @Entity
 public class Collection {
+
     /**
      * The unique identifier for the collection.
      */
@@ -35,8 +36,8 @@ public class Collection {
     /**
      * The list of coins associated with this collection.
      * <p>
-     * This is a many-to-many relationship, and the association is bidirectional.
-     * It is mapped by the "collections" property in the {@link Coin} class.
+     * This is a many-to-many relationship, and the association is bidirectional. It is mapped by the "collections"
+     * property in the {@link Coin} class.
      *
      * @see Coin
      */
@@ -45,8 +46,4 @@ public class Collection {
     @ToString.Exclude
     private List<Coin> coins;
 }
-/**
- * See Also:
- * - {@link Coin} (Coin Entity): Represents a coin entity in the application.
- */
 
